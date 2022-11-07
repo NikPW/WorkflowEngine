@@ -11,16 +11,6 @@ namespace WorkflowApi.Controllers
 {
     public class ActivitiesController : BaseController
     {
-        [HttpPost]
-        public ActionResult BuildWorkflow()
-        {
-            return BadRequest("Not implemented");
-        }
 
-        [HttpPost]
-        public ActionResult<List<Workflow>>  GetActivities()
-        {
-            return BadRequest("Not implemented");
-        }
     }
 }

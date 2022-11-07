@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using System.Reflection;
-using ActivitiesApi.Activities;
 using DatabaseContext;
 using DilshodWorkflowEngine.Service;
 using DilshodWorkflowEngine.Service.Base;
@@ -20,7 +19,6 @@ namespace Builder
     {
         public static IServiceCollection AddWorkflowEngine(this IServiceCollection collection)
         {
-            collection.AddTransient<GetActivity>();
             collection.AddTransient<DeleteData>();
             collection.AddTransient<SaveData>();
             collection.AddTransient<UpdateData>();

@@ -9,19 +9,38 @@
     <projectFile profileName="IIS Express">DilshodWorkflowEngine/Server/DilshodWorkflowEngine.Server.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67150097-35eb-4cbe-b9c3-cc7f682cd53d" name="Changes" comment="" />
+    <list default="true" id="67150097-35eb-4cbe-b9c3-cc7f682cd53d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActivitiesApi/Activities/GetActivity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActivitiesApi/ActivitiesApi.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActivitiesApi/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkflowApi/BaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActivitiesApi/Controllers/Http/ReceiveHttpRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Activities/Http/ReceiveHttpRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ActivitiesApi/Controllers/Http/SendHttpRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Activities/Http/SendHttpRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/Activities/RegistrationActivities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/Activities/RegistrationActivities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/Builder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/Builder.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/WorkflowEngineBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/WorkflowEngineBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DilshodWorkflowEngine.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine/Client/DilshodWorkflowEngine.Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DilshodWorkflowEngine/Client/DilshodWorkflowEngine.Client.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Activities/ActivityModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Models/ActivityModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Models.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Models.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkflowApi/Controllers/ActivitiesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkflowApi/Controllers/ActivitiesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkflowApi/Controllers/WorkflowBuilderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkflowApi/Controllers/WorkflowBuilderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkflowApi/WorkflowApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WorkflowApi/WorkflowApi.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ActivitiesApi/Activities/GetActivity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/225d9583e6f9a3d6562454fe6c321ad48dbcf7efa345cdb4926c9ea94e419b4/IHostedService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Context/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/Activities/ActivityModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/Models/ActivityModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/WorkflowBuilderModels/BuildResultModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Workflows/Workflow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Workflows/WorkflowCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/Activities/Conditions/SingleCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/Activities/Http/SendHttpRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Base/IBaseService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/Interfaces/IWorkflowBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/WorkflowBuilder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -37,14 +56,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ts.external.directory.path": "C:\\Users\\f.davlatov\\AppData\\Local\\JetBrains\\Toolbox\\apps\\Rider\\ch-0\\222.4167.23\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.DilshodWorkflowEngine.Server">
     <configuration name="BaseControllers" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/BaseControllers/BaseControllers.csproj" />
@@ -160,13 +180,27 @@
       <workItem from="1667710073806" duration="1000" />
       <workItem from="1667710087852" duration="15686000" />
       <workItem from="1667736069790" duration="5976000" />
+      <workItem from="1667803772014" duration="8189000" />
+      <workItem from="1667815677243" duration="6063000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

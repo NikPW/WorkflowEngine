@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DilshodWorkflowEngine.Service.Base;
 
-namespace ActivitiesApi.Controllers.Http
+namespace ActivitiesApi.Activities.Http
 {
-    public class ReceiveHttpRequest : BaseController
+    public class ReceiveHttpRequest : IBaseService
     {
-        [HttpPost]
         public string StartWorkflow()
         {
             return "StartWorkflow Method";
         }
-
-        [HttpPost]
+        
         public string IdontKnowAboutLogic()
         {
             return "IdontKnowAboutLogic Method";

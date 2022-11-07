@@ -1,16 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DilshodWorkflowEngine.Service.Base;
 
-namespace ActivitiesApi.Controllers.Http
+namespace ActivitiesApi.Activities.Http
 {
-    public class SendHttpRequest : BaseController
+    public class SendHttpRequest : IBaseService
     {
-        [HttpPost]
         public string SendRequestToEtenderUzexUz()
         {
             return "SendRequestToEtenderUzexUz Method";
         }
         
-        [HttpPost]
         public string SendRequestToHumo()
         {
             return "SendRequestToHumo Method";

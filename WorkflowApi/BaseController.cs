@@ -1,7 +1,7 @@
 ﻿using Extensions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ActivitiesApi
+namespace WorkflowApi
 {
     [ApiController]
     [Route("workflow/[controller]/[action]")]
