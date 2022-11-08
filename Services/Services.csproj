@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Context\Context.csproj" />
+      <ProjectReference Include="..\Dto\Dto.csproj" />
       <ProjectReference Include="..\Models\Models.csproj" />
       <ProjectReference Include="..\DilshodWorkflowEngine\Shared\DilshodWorkflowEngine.Data.csproj" />
     </ItemGroup>

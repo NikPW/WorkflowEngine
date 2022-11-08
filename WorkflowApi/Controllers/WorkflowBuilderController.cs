@@ -1,5 +1,6 @@
 ﻿using Core.Workflows;
 using DilshodWorkflowEngine.Service.Workflows;
+using Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WorkflowApi.Controllers
@@ -19,12 +20,11 @@ namespace WorkflowApi.Controllers
             return Ok(await _service.AddWorkflow(name));
         }
 
-        
-        
         [HttpPost]
-        public ActionResult<List<Workflow>>  GetActivities()
+        public async Task<ActionResult> AddActivityToWorkflow(AddActivityToWorkflowsDto dto)
         {
-            return BadRequest("Not implemented");
+            await _service.AddActivityToWorkflow(dto);
+            return Ok();
         }
     }
 }

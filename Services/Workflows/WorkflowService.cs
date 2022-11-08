@@ -1,6 +1,7 @@
 ﻿using DatabaseContext;
 using DatabaseContext.Entities;
 using DilshodWorkflowEngine.Service.Base;
+using Dto;
 using Microsoft.EntityFrameworkCore;
 
 namespace DilshodWorkflowEngine.Service.Workflows
@@ -31,23 +32,13 @@ namespace DilshodWorkflowEngine.Service.Workflows
             return id;
         }
 
-        public async Task<string> AddActivityToWorkflow(string workflowId)
+        public async Task AddActivityToWorkflow(AddActivityToWorkflowsDto dto)
         {
-            List<ActivityEntity>? activities = null;
+            var activity = await Context.__activities.FirstOrDefaultAsync(p => p.Id.Equals(dto.ActivityId));
             
-            if (!String.IsNullOrEmpty(workflowId))
-            {
-                activities = Context.__activities.Where(p => p.WorkflowId.Equals(workflowId)).ToList();
-            }
-            
-            var id = Guid.NewGuid().ToString();
-            
-            if (activities != null)
-            {
-                activities.Add(new ActivityEntity());
-            }
+            activity.WorkflowId = dto.WorkflowId;
 
-            return id;
+            await Context.SaveChangesAsync();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
+using Builder.Activities;
 using DatabaseContext;
 using DilshodWorkflowEngine.Service;
+using DilshodWorkflowEngine.Service.Activities;
 using DilshodWorkflowEngine.Service.Databases;
 using DilshodWorkflowEngine.Service.Requests;
 using DilshodWorkflowEngine.Service.Workflows;
@@ -21,10 +23,12 @@ namespace Builder
             collection.AddTransient<SendHttpRequest>();
             collection.AddTransient<WorkflowBuilder>();
             collection.AddTransient<WorkflowService>();
+            collection.AddTransient<ActivitiesService>();
             
             collection.AddControllers();
             
             collection.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("WorkflowApi")));
+            
             return collection;
         }
 
@@ -52,15 +56,9 @@ namespace Builder
             return collection;
         }
 
-        public static IServiceCollection AddActivities(this IServiceCollection collection)
+        public static IServiceCollection AddBasicActivities(this IServiceCollection collection)
         {
-            Assembly services = typeof(string).Assembly;
-            foreach (Type type in services.GetTypes())
-            {
-                
-            }
-
-            return collection;
+            return collection.RegisterActivities();
         }
     }
 }
