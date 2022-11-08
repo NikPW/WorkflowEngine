@@ -2,6 +2,7 @@
 using Builder;
 using DatabaseContext;
 using DilshodWorkflowEngine.Shared.Base;
+using Extensions.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace DilshodWorkflowEngine.Server
@@ -24,17 +25,12 @@ namespace DilshodWorkflowEngine.Server
             Configuration.GetSection(nameof(AppConfig)).Bind(config);
             services.AddSingleton(config);
 
-            var contextOptions = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlite(config.ConnectionString)
-                .Options;
-            using var context = new AppDbContext(contextOptions);
-
             #region Services
 
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddWorkflowEngine()
-                .AddDatabaseConnection(context);
+                .AddDatabaseConnection(config.ConnectionString, EfProviders.SqlLite);
 
             #endregion
             

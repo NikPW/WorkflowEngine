@@ -1,16 +1,11 @@
-﻿using System.Data;
-using System.Reflection;
+﻿using System.Reflection;
 using DatabaseContext;
 using DilshodWorkflowEngine.Service;
-using DilshodWorkflowEngine.Service.Base;
 using DilshodWorkflowEngine.Service.Databases;
 using DilshodWorkflowEngine.Service.Requests;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Mvc;
+using DilshodWorkflowEngine.Service.Workflows;
+using Extensions.Enums;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.EntityFrameworkCore.Scaffolding;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Builder
@@ -25,41 +20,35 @@ namespace Builder
             collection.AddTransient<SendGrpcRequest>();
             collection.AddTransient<SendHttpRequest>();
             collection.AddTransient<WorkflowBuilder>();
+            collection.AddTransient<WorkflowService>();
             
             collection.AddControllers();
             
             collection.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("WorkflowApi")));
             return collection;
         }
-        
+
         /// <summary>
         /// Receives existing DbConnection for workflows. 
         /// </summary>
         /// <param name="collection"></param>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public static IServiceCollection AddDatabaseConnection(this IServiceCollection collection, 
-            AppDbContext context)
-        {
-            IBaseService.Connection = context;
-
-            return collection;
-        }
-        
-        /// <summary>
-        /// Receives connection string and uses it to instantiate DbConnection for workflows. 
-        /// </summary>
-        /// <param name="collection"></param>
         /// <param name="connectionString"></param>
+        /// <param name="provider"></param>
         /// <returns></returns>
         public static IServiceCollection AddDatabaseConnection(this IServiceCollection collection, 
-            string connectionString)
+            string connectionString,
+            EfProviders provider)
         {
-            var contextOptions = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlite(connectionString)
-                .Options;
-            using var context = new AppDbContext(contextOptions);
-
+            switch (provider)
+            {
+                case EfProviders.SqlLite: 
+                    collection.AddDbContext<AppDbContext>(o => o.UseSqlite(connectionString));
+                    break;
+                case EfProviders.MsSql: 
+                    collection.AddDbContext<AppDbContext>(o => o.UseSqlServer(connectionString));
+                    break;
+            }
+            
             return collection;
         }
 

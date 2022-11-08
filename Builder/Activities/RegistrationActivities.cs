@@ -18,7 +18,7 @@ namespace Builder.Activities
                 Assembly mscorlib = typeof(BaseController).Assembly;
                 foreach (var type in mscorlib.GetTypes())
                 {
-                    if (typeof(BaseController).IsAssignableFrom(type) || typeof(IBaseService).IsAssignableFrom(type))
+                    if (typeof(BaseController).IsAssignableFrom(type) || typeof(BaseService).IsAssignableFrom(type))
                     {
                         var methods = type.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
                         for (int i = 0; i < methods.Length; ++i)

@@ -1,13 +1,14 @@
 ﻿using System.Data;
 using Core.WorkflowBuilderModels;
+using DatabaseContext;
 using DilshodWorkflowEngine.Service.Base;
 using DilshodWorkflowEngine.Service.Interfaces;
 
 namespace DilshodWorkflowEngine.Service
 {
-    public class WorkflowBuilder : IBaseService, IWorkflowBuilder
+    public class WorkflowBuilder : BaseService, IWorkflowBuilder
     {
-        public WorkflowBuilder() : base()
+        public WorkflowBuilder(AppDbContext context) : base(context)
         {
             
         }

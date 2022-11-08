@@ -25,5 +25,9 @@
     <ProjectReference Include="..\Shared\DilshodWorkflowEngine.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data" />
+  </ItemGroup>
+
 
 </Project>
