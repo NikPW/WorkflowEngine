@@ -30,7 +30,8 @@ namespace DilshodWorkflowEngine.Server
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddWorkflowEngine()
-                .AddDatabaseConnection(config.ConnectionString, EfProviders.SqlLite);
+                .AddDatabaseConnection(config.ConnectionString, EfProviders.SqlLite)
+                .AddBasicActivities();
 
             #endregion
             

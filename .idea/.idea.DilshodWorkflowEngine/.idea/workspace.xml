@@ -10,22 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67150097-35eb-4cbe-b9c3-cc7f682cd53d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources.local.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources/356a3aa9-610e-4173-864f-b8bd20fe0f9a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources/77cded6f-6b1c-4056-9420-f7216acbf64f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources/a3c8bd86-aea6-4c63-80c0-cef9ff27ee1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/dataSources/a3c8bd86-aea6-4c63-80c0-cef9ff27ee1f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DilshodWorkflowEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Builder/Activities/RegistrationActivities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/Activities/RegistrationActivities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builder/Activities/RegistrationActivities.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Builder/WorkflowEngineBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Builder/WorkflowEngineBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Context/Entities/ActivityEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Context/Entities/ActivityEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DilshodWorkflowEngine.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Context/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Context/AppDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Data/test.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Data/test.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Data/test.db-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Data/test.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Data/test.db-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Management/Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Services.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Services.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Workflows/WorkflowService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Workflows/WorkflowService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkflowApi/Controllers/ActivitiesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkflowApi/Controllers/ActivitiesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkflowApi/Controllers/WorkflowBuilderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WorkflowApi/Controllers/WorkflowBuilderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Data/test.db-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Data/test.db-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DilshodWorkflowEngine/Server/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/225d9583e6f9a3d6562454fe6c321ad48dbcf7efa345cdb4926c9ea94e419b4/IHostedService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2c3e28468b2a9ae5485968818c48fd40338a6b8ae1295f29a355225a8d238/First.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Context/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Models/ActivityModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/WorkflowBuilderModels/BuildResultModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -182,7 +180,7 @@
       <workItem from="1667803772014" duration="8189000" />
       <workItem from="1667815677243" duration="6229000" />
       <workItem from="1667885268698" duration="19247000" />
-      <workItem from="1667922415772" duration="4270000" />
+      <workItem from="1667975208679" duration="10745000" />
     </task>
     <task id="LOCAL-00001" summary="Nothings here">
       <created>1667825213741</created>

@@ -1326,7 +1326,6 @@
     </column>
     <column id="487" parent="482" name="Order">
       <DataType>INTEGER|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="488" parent="482" name="WorkflowId">
@@ -1381,38 +1380,43 @@
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="499" parent="484" name="Name">
+    <column id="499" parent="484" name="ServiceId">
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="500" parent="484" name="sqlite_autoindex___workflows_1">
+    <column id="500" parent="484" name="Name">
+      <DataType>TEXT|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="501" parent="484" name="sqlite_autoindex___workflows_1">
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="501" parent="484" name="PK___workflows">
+    <key id="502" parent="484" name="PK___workflows">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex___workflows_1</UnderlyingIndexName>
     </key>
-    <column id="502" parent="485" name="type">
+    <column id="503" parent="485" name="type">
       <DataType>TEXT|0s</DataType>
       <Position>1</Position>
     </column>
-    <column id="503" parent="485" name="name">
+    <column id="504" parent="485" name="name">
       <DataType>TEXT|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="504" parent="485" name="tbl_name">
+    <column id="505" parent="485" name="tbl_name">
       <DataType>TEXT|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="505" parent="485" name="rootpage">
+    <column id="506" parent="485" name="rootpage">
       <DataType>INT|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="506" parent="485" name="sql">
+    <column id="507" parent="485" name="sql">
       <DataType>TEXT|0s</DataType>
       <Position>5</Position>
     </column>

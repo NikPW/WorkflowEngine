@@ -26,6 +26,9 @@ namespace DatabaseContext
                 .HasMany(p => p.Activities)
                 .WithOne(p => p.Workflow)
                 .HasForeignKey(p => p.WorkflowId);
+            modelBuilder.Entity<ActivityEntity>()
+                .HasIndex(p => p.Name)
+                .IsUnique();
         }
     }
 }
