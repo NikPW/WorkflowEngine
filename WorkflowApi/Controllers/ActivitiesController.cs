@@ -24,30 +24,6 @@ namespace WorkflowApi.Controllers
         [HttpPost]
         public async Task<IEnumerable<ActivityEntity>> GetRegisteredActivities([FromServices] AppDbContext context)
         {
-            /*
-            List<ActivityEntity> activities = new List<ActivityEntity>();
-            Assembly mscorlib = typeof(BaseController).Assembly;
-            foreach (var type in mscorlib.GetTypes())
-            {
-                if (typeof(BaseController).IsAssignableFrom(type) || typeof(BaseService).IsAssignableFrom(type))
-                {
-                    var methods = type.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
-                    for (int i = 0; i < methods.Length; ++i)
-                    {
-                        activities.Add(new ActivityEntity()
-                        {
-                            Id = Guid.NewGuid().ToString(),
-                            Name = methods[i].Name
-                        });
-                    }
-                }
-            }
-            */
-            /*
-            context.__activities.AddRange(activities);
-            context.SaveChanges();
-            */
-
             List<ActivityEntity> activities = context.__activities.Where(p => p.Id != null).ToList();
 
             return activities;

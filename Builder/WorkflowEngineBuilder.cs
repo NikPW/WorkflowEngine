@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Builder.Activities;
 using Core.Activities;
 using DatabaseContext;
 using DatabaseContext.Entities;
@@ -62,23 +63,50 @@ namespace Builder
         public static IServiceCollection AddBasicActivities(this IServiceCollection collection)
         {
             List<ActivityEntity> activities = new List<ActivityEntity>();
-            Assembly mscorlib = typeof(BaseController).Assembly;
-            foreach (var type in mscorlib.GetTypes())
+            Assembly controllersAssembly = typeof(BaseController).Assembly;
+            Assembly servicesAssembly = typeof(BaseService).Assembly;
+
+            activities.AddRange(ActivityBuildHelper.GetActivitiesInAssembly(controllersAssembly));
+            activities.AddRange(ActivityBuildHelper.GetActivitiesInAssembly(servicesAssembly));
+
+            using (ServiceProvider serviceProvider = collection.BuildServiceProvider())
             {
-                if (typeof(BaseController).IsAssignableFrom(type) || typeof(BaseService).IsAssignableFrom(type))
-                {
-                    var methods = type.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
-                    for (int i = 0; i < methods.Length; ++i)
-                    {
-                        activities.Add(new ActivityEntity()
-                        {
-                            Id = Guid.NewGuid().ToString(),
-                            Name = methods[i].Name
-                        });
-                    }
-                }
+                var appDbContext = serviceProvider.GetRequiredService<AppDbContext>();
+                ActivityBuildHelper.SaveActivitiesToDatabase(appDbContext, activities);
             }
-            
+
+            return collection;
+        }
+
+        public static IServiceCollection AddCustomActivities(this IServiceCollection collection)
+        {
+            List<ActivityEntity> activities = new List<ActivityEntity>();
+            Assembly assembly = Assembly.GetCallingAssembly();
+
+            activities.AddRange(ActivityBuildHelper.GetActivitiesInAssembly(assembly));
+
+            using (ServiceProvider serviceProvider = collection.BuildServiceProvider())
+            {
+                var appDbContext = serviceProvider.GetRequiredService<AppDbContext>();
+                ActivityBuildHelper.SaveActivitiesToDatabase(appDbContext, activities);
+            }
+
+            return collection;
+        }
+
+        public static IServiceCollection AddCustomActivities(this IServiceCollection collection,
+            Assembly assembly)
+        {
+            List<ActivityEntity> activities = new List<ActivityEntity>();
+
+            activities.AddRange(ActivityBuildHelper.GetActivitiesInAssembly(assembly));
+
+            using (ServiceProvider serviceProvider = collection.BuildServiceProvider())
+            {
+                var appDbContext = serviceProvider.GetRequiredService<AppDbContext>();
+                ActivityBuildHelper.SaveActivitiesToDatabase(appDbContext, activities);
+            }
+
             return collection;
         }
     }
