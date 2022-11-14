@@ -10,29 +10,26 @@ using DilshodWorkflowEngine.Service.Databases;
 using DilshodWorkflowEngine.Service.Requests;
 using DilshodWorkflowEngine.Service.Workflows;
 using Extensions.Enums;
+using Management;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WorkflowApi;
 
 namespace Builder
 {
-    public static class DilshodBuilder
+    public static class WorkflowEngineBuilder
     {
         public static IServiceCollection AddWorkflowEngine(this IServiceCollection collection)
         {
-            collection.AddTransient<DeleteData>();
-            collection.AddTransient<SaveData>();
-            collection.AddTransient<UpdateData>();
-            collection.AddTransient<SendGrpcRequest>();
-            collection.AddTransient<SendHttpRequest>();
             collection.AddTransient<WorkflowBuilder>();
             collection.AddTransient<WorkflowService>();
             collection.AddTransient<ActivitiesService>();
+            collection.AddHostedService<WorkflowManager>();
             
             collection.AddControllers();
             
             collection.AddMvc().AddApplicationPart(Assembly.Load(new AssemblyName("WorkflowApi")));
-            
+
             return collection;
         }
 
@@ -63,10 +60,8 @@ namespace Builder
         public static IServiceCollection AddBasicActivities(this IServiceCollection collection)
         {
             List<ActivityEntity> activities = new List<ActivityEntity>();
-            Assembly controllersAssembly = typeof(BaseController).Assembly;
             Assembly servicesAssembly = typeof(BaseService).Assembly;
 
-            activities.AddRange(ActivityBuildHelper.GetActivitiesInAssembly(controllersAssembly));
             activities.AddRange(ActivityBuildHelper.GetActivitiesInAssembly(servicesAssembly));
 
             using (ServiceProvider serviceProvider = collection.BuildServiceProvider())

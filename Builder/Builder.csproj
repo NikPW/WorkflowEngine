@@ -25,6 +25,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Context\Context.csproj" />
+      <ProjectReference Include="..\Management\Management.csproj" />
       <ProjectReference Include="..\Services\Services.csproj" />
       <ProjectReference Include="..\WorkflowApi\WorkflowApi.csproj" />
     </ItemGroup>

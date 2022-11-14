@@ -15,7 +15,7 @@ namespace Builder.Activities
             
             foreach (var type in assembly.GetTypes())
             {
-                if (typeof(BaseController).IsAssignableFrom(type) || typeof(BaseService).IsAssignableFrom(type))
+                if (typeof(BaseService).IsAssignableFrom(type))
                 {
                     var methods = type.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
                     for (int i = 0; i < methods.Length; ++i)
@@ -43,9 +43,11 @@ namespace Builder.Activities
                 regActivitiesNames.Add(regActivity.Name);
             }
 
+            /*
             context.__activities.AddRange(activities.Where(p => p.Id != null).DistinctBy(p => p.Name));
 
             context.SaveChanges();
+            */
         }
     }
 }
