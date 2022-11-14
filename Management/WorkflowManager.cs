@@ -19,7 +19,7 @@ namespace Management
         
         public void Dispose()
         {
-            _thread.Interrupt();
+            
         }
 
         public async Task StartAsync(CancellationToken cancellationToken)
@@ -45,17 +45,19 @@ namespace Management
             server.Start();
             
             var context = await server.GetContextAsync();
- 
+            var request = context.Request;
+            var method = request.HttpMethod;
+
             var response = context.Response;
             string responseText =
                 @"<!DOCTYPE html>
                 <html>
                     <head>
                         <meta charset='utf8'>
-                        <title>METANIT.COM</title>
+                        <title>Dilshod.uzzz</title>
                     </head>
                     <body>
-                        <h2>Hello METANIT.COM</h2>
+                        <h2>Hello, Dilshod</h2>
                     </body>
                 </html>";
             byte[] buffer = Encoding.UTF8.GetBytes(responseText);
